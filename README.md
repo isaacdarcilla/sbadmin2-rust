@@ -4,4 +4,4 @@
 
 <p align="center">🚀Admin dashboard template for Rust and Rocket.rs based on SbAdmin2</p>
 
-Under Development
+
