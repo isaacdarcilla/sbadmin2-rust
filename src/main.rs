@@ -1,12 +1,12 @@
-#![feature(proc_macro_hygiene, decl_macro)]
-
-#[macro_use] extern crate rocket;
-
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
-}
+use rocket_contrib::templates::Template;
 
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    rocket::ignite()
+        .attach(Template::fairing());
+}
+
+#[get("/")]
+fn index() -> Template {
+    let context = context();
+    Template::render("index", &context)
 }
