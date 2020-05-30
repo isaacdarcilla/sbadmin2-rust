@@ -15,4 +15,4 @@ serde_json = "1.0"
 [dependencies.rocket_contrib]
 version = "0.4.4"
 default-features = false
-features = ["handlebars_templates", "tera_templates"]
+features = ["tera_templates"]
