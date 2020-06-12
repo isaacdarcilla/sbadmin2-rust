@@ -2,6 +2,6 @@
 
 <h2 align="center">Rocket Admin 2</h2>
 
-<p align="center">🚀Admin dashboard template for Rust and Rocket.rs based on SbAdmin2</p>
+<p align="center">🚀Admin dashboard template for Rust and Rocket.rs based on SbAdmin2. <br> Under development.</p>
 
 
