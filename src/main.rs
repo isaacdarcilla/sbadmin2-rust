@@ -10,23 +10,17 @@ extern crate rocket_contrib;
 use std::collections::HashMap;
 
 use rocket::Request;
-use rocket::response::Redirect;
 use rocket_contrib::templates::Template;
+use rocket_contrib::serve::StaticFiles;
 
 #[derive(Serialize)]
 struct TemplateContext {
-    name: String,
     items: Vec<&'static str>
 }
 
 #[get("/")]
-fn index() -> Redirect {
-    Redirect::to(uri!(get: name = "Unknown"))
-}
-
-#[get("/<name>")]
-fn get(name: String) -> Template {
-    let context = TemplateContext { name, items: vec!["One", "Two", "Three"] };
+fn index() -> Template {
+    let context = TemplateContext { items: vec!["One", "Two", "Three"] };
     Template::render("index", &context)
 }
 
@@ -39,7 +33,7 @@ fn not_found(req: &Request) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, get])
+        .mount("/", routes![index])
         .attach(Template::fairing())
         .register(catchers![not_found])
 }
