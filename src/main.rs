@@ -20,7 +20,7 @@ struct TemplateContext {
 
 #[get("/")]
 fn index() -> Template {
-    let context = TemplateContext { items: vec!["One", "Two", "Three"]};
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
     Template::render("index", &context)
 }
 
