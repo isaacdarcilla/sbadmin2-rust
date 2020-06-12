@@ -24,7 +24,7 @@ fn index() -> Redirect {
     Redirect::to(uri!(get: name = "Unknown"))
 }
 
-#[get("/hello/<name>")]
+#[get("/<name>")]
 fn get(name: String) -> Template {
     let context = TemplateContext { name, items: vec!["One", "Two", "Three"] };
     Template::render("index", &context)
