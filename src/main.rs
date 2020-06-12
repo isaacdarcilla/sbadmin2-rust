@@ -20,7 +20,7 @@ struct TemplateContext {
 
 #[get("/")]
 fn index() -> Template {
-    let context = TemplateContext { items: vec!["One", "Two", "Three"] };
+    let context = TemplateContext { items: vec!["One", "Two", "Three"]};
     Template::render("index", &context)
 }
 
@@ -34,6 +34,7 @@ fn not_found(req: &Request) -> Template {
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
         .mount("/", routes![index])
+        .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
 }
