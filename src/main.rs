@@ -30,6 +30,12 @@ fn buttons() -> Template {
     Template::render("buttons", &context)
 }
 
+#[get("/cards")]
+fn cards() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("cards", &context)
+}
+
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
@@ -39,7 +45,7 @@ fn not_found(req: &Request) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, buttons])
+        .mount("/", routes![index, buttons, cards])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
