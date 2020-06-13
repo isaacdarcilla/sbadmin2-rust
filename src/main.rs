@@ -24,6 +24,8 @@ fn index() -> Template {
     Template::render("index", &context)
 }
 
+// Components
+
 #[get("/buttons")]
 fn buttons() -> Template {
     let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
@@ -36,6 +38,32 @@ fn cards() -> Template {
     Template::render("cards", &context)
 }
 
+// Utilities
+
+#[get("/colors")]
+fn colors() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("utilities-color", &context)
+}
+
+#[get("/borders")]
+fn borders() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("utilities-border", &context)
+}
+
+#[get("/animations")]
+fn animations() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("utilities-animation", &context)
+}
+
+#[get("/others")]
+fn others() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("utilities-other", &context)
+}
+
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
@@ -45,7 +73,7 @@ fn not_found(req: &Request) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, buttons, cards])
+        .mount("/", routes![index, buttons, cards, colors, borders, animations, others])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
