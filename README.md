@@ -22,7 +22,7 @@
 ## Deploying to Heroku
 
 * `$ heroku create --buildpack https://github.com/emk/heroku-buildpack-rust.git`
-* `$ git remote add heroku https://git.heroku.com/<heroku-project-name>.git
+* `$ git remote add heroku https://git.heroku.com/<heroku-project-name>.git`
 * `$ echo "web: ROCKET_PORT=$PORT ROCKET_ENV=prod ./target/release/sbadmin" > Procfile`
 * `$ echo "VERSION=nightly" > RustConfig`
 * `$ git add . && git commit -m "Add Heroku deploy configuration"`
