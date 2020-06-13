@@ -1,3 +1,4 @@
-# target folder
-
+/.idea
 /target
+
+Cargo.lock
