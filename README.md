@@ -6,7 +6,9 @@
 
 ![Screenshot](https://github.com/isaacdarcilla/sbadmin2-rust/blob/master/img/1.png)
 
-<a href="https://rust-admin.herokuapp.com/">
+## 🚀 Demonstration
+
+<a target href="https://rust-admin.herokuapp.com/">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
