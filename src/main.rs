@@ -120,7 +120,7 @@ fn rocket() -> rocket::Rocket {
     rocket::ignite()
         .mount("/", routes![index, buttons, cards, colors, borders, 
                             animations, others, login, register, reset,
-                            error, blank])
+                            error, blank, charts, tables])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
