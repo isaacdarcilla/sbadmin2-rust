@@ -1,4 +1,8 @@
-<p align="center"><img width="200" src="https://cdn.dribbble.com/users/297466/screenshots/2783613/1.jpg"></p>
+<p align="center"><img width="120" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRust_programming_language_black_logo.svg%2F1200px-Rust_programming_language_black_logo.svg.png&f=1&nofb=1"></p>
+
+<a href="https://heroku.com/deploy">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
 
 <h2 align="center">Rust Admin 2</h2>
 
@@ -13,7 +17,7 @@
 * Cargo
 * Heroku (Optional)
 
-## 🚀 Installation
+## 🚀 Installation in Host
 
 * `$ git clone https://github.com/isaacdarcilla/sbadmin2-rust.git`
 * `$ cd sbadmin2-rust` 
