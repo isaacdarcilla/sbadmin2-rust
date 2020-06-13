@@ -27,3 +27,11 @@
 * `$ echo "VERSION=nightly" > RustConfig`
 * `$ git add . && git commit -m "Add Heroku deploy configuration"`
 * `$ git push heroku master`
+
+## Developer
+
+Developed by Isaac [(facebook.com/isaacdarcilla)](https://web.facebook.com/isaacdarcilla)
+
+## Support
+
+Fork or star this repository for support.
