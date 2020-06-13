@@ -24,16 +24,22 @@ fn index() -> Template {
     Template::render("index", &context)
 }
 
+#[get("/buttons")]
+fn buttons() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("buttons", &context)
+}
+
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
     map.insert("path", req.uri().path());
-    Template::render("error/404", &map)
+    Template::render("404", &map)
 }
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index])
+        .mount("/", routes![index, buttons])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])

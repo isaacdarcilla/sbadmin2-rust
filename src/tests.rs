@@ -42,7 +42,6 @@ fn test_name() {
     // Check that the /hello/<name> route works.
     dispatch!(Get, "/hello/Jack", |client: &Client, mut response: LocalResponse| {
         let context = super::TemplateContext {
-            name: "Jack".into(),
             items: vec!["One", "Two", "Three"]
         };
 
