@@ -7,6 +7,7 @@ description = "Admin dashboard template for Rust and Rocket.rs based on SbAdmin2
 homepage = "http://isaaaac.me/"
 repository = "https://github.com/isaacdarcilla/sbadmin2-rust"
 keywords = ["sbadmin2", "graphics", "dashboard", "template"]
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
