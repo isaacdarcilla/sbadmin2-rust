@@ -1,14 +1,14 @@
 <p align="center"><img width="120" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRust_programming_language_black_logo.svg%2F1200px-Rust_programming_language_black_logo.svg.png&f=1&nofb=1"></p>
 
-<a href="https://heroku.com/deploy">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
-
 <h2 align="center">Rust Admin 2</h2>
 
-<p align="center">🚀 Admin dashboard template for Rust and Rocket.rs based on SbAdmin2</p>
+<p align="center">Admin dashboard template for Rust and Rocket.rs based on SbAdmin2</p>
 
 ![Screenshot](https://github.com/isaacdarcilla/sbadmin2-rust/blob/master/img/1.png)
+
+<a href="https://rust-admin.herokuapp.com/">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
 
 ## 🚀 Prerequisites
 
