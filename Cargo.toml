@@ -1,5 +1,5 @@
 [package]
-name = "sbadmin2-rust"
+name = "sbadmin_rust"
 version = "0.1.0"
 authors = ["isaacdarcilla <isaacdarcilla@gmail.com>"]
 edition = "2018"
