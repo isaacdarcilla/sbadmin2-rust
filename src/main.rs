@@ -84,6 +84,31 @@ fn reset() -> Template {
     Template::render("forgot-password", &context)
 }
 
+#[get("/error")]
+fn error() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("404", &context)
+}
+
+#[get("/blank")]
+fn blank() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("blank", &context)
+}
+
+#[get("/charts")]
+fn charts() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("charts", &context)
+}
+
+#[get("/tables")]
+fn tables() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("tables", &context)
+}
+
+
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
@@ -94,7 +119,8 @@ fn not_found(req: &Request) -> Template {
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
         .mount("/", routes![index, buttons, cards, colors, borders, 
-                            animations, others, login, register, reset])
+                            animations, others, login, register, reset,
+                            error, blank])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
