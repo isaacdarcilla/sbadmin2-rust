@@ -8,7 +8,7 @@
 
 ## 🚀 Demonstration
 
-<a target href="https://rust-admin.herokuapp.com/">
+<a target="_blank" href="https://rust-admin.herokuapp.com/">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
