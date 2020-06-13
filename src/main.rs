@@ -64,6 +64,26 @@ fn others() -> Template {
     Template::render("utilities-other", &context)
 }
 
+// Pages
+
+#[get("/login")]
+fn login() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("login", &context)
+}
+
+#[get("/register")]
+fn register() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("register", &context)
+}
+
+#[get("/reset")]
+fn reset() -> Template {
+    let context = TemplateContext { items: vec!["SBAdmin2 Rust by Isaac"]};
+    Template::render("forgot-password", &context)
+}
+
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
@@ -73,7 +93,8 @@ fn not_found(req: &Request) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, buttons, cards, colors, borders, animations, others])
+        .mount("/", routes![index, buttons, cards, colors, borders, 
+                            animations, others, login, register, reset])
         .mount("/", StaticFiles::from("templates"))
         .attach(Template::fairing())
         .register(catchers![not_found])
