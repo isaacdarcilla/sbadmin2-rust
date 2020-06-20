@@ -108,7 +108,6 @@ fn tables() -> Template {
     Template::render("tables", &context)
 }
 
-
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
     let mut map = HashMap::new();
